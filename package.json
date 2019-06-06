@@ -1,0 +1,61 @@
+{
+  "name": "cypress-mongo-seeder",
+  "version": "1.0.4",
+  "description": "A cypress plugin to populate a mongo db from json files",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arifaydogmus/-cypress-mongo-seeder.git"
+  },
+  "keywords": [
+    "node",
+    "mongo",
+    "seed",
+    "cypress",
+    "cypress plugin",
+    "testing seed",
+    "seeder",
+    "db seeder"
+  ],
+  "author": "Arif Aydogmus <aydogmus@gmail.com>",
+  "main": "./build/index.js",
+  "scripts": {
+    "build": "yarn clean && tsc -d",
+    "prepare": "npm run build",
+    "clean": "shx rm -rf build",
+    "example": "node examples/test.js",
+    "changelog": "auto-changelog -p"
+  },
+  "license": "Unlicense",
+  "licenseFilename": "LICENSE",
+  "readmeFilename": "README.md",
+  "homepage": "https://github.com/arifaydogmus/cypress-mongo-seeder#readme",
+  "bugs": {
+    "url": "https://github.com/arifaydogmus/cypress-mongo-seeder/issues"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  },
+  "dependencies": {
+    "lodash": "4.17.11",
+    "mongodb": "3.2.7"
+  },
+  "devDependencies": {
+    "@types/jest": "24.0.13",
+    "@types/lodash": "4.14.133",
+    "@types/mongodb": "3.1.28",
+    "@types/node": "12.0.4",
+    "auto-changelog": "1.13.0",
+    "jest": "24.8.0",
+    "shx": "0.3.2",
+    "ts-jest": "24.0.2",
+    "tslint": "5.17.0",
+    "tslint-config-prettier": "1.18.0",
+    "tslint-config-standard": "8.0.1",
+    "typescript": "3.5.1",
+    "typescript-tslint-plugin": "0.4.0"
+  }
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "_id": { "$oid": "5cf91fdca8340a82e171d916" },
+    "name": "Into the stars",
+    "album": "Into the stars",
+    "artist": "Alphawezen",
+    "createdAt": { "$date": "2019-06-04T16:04:29.476+0000" },
+    "updatedAt": { "$date": "2019-06-04T16:04:48.545+0000" }
+  },
+  {
+    "_id": { "$oid": "5cf9203aa8340a82e171d919" },
+    "name": "Sabahat Makami",
+    "album": "Serenades podcast",
+    "artist": "Kozmonot Osman",
+    "createdAt": { "$date": "2019-06-04T16:04:29.476+0000" },
+    "updatedAt": { "$date": "2019-06-04T16:04:48.545+0000" }
+  }
+]
