@@ -1,10 +1,10 @@
 {
   "name": "cypress-mongo-seeder",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A cypress plugin to populate a mongo db from json files",
   "repository": {
     "type": "git",
-    "url": "https://github.com/arifaydogmus/-cypress-mongo-seeder.git"
+    "url": "https://github.com/arifaydogmus/cypress-mongo-seeder.git"
   },
   "keywords": [
     "node",
