@@ -1,6 +1,6 @@
 {
-  "name": "cypress-mongo-seeder",
-  "version": "1.0.5",
+  "name": "@oliveiracdz/cypress-mongo-seeder",
+  "version": "1.0.6",
   "description": "A cypress plugin to populate a mongo db from json files",
   "repository": {
     "type": "git",
@@ -40,8 +40,9 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "lodash": "4.17.11",
-    "mongodb": "3.2.7"
+    "lodash": "^4.17.15",
+    "mongodb": "3.2.7",
+    "uuid-mongodb": "^2.1.1"
   },
   "devDependencies": {
     "@types/jest": "24.0.13",
