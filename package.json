@@ -1,5 +1,5 @@
 {
-  "name": "@oliveiracdz/cypress-mongo-seeder",
+  "name": "cypress-mongo-seeder",
   "version": "1.0.6",
   "description": "A cypress plugin to populate a mongo db from json files",
   "repository": {
