@@ -1,6 +1,6 @@
 {
   "name": "cypress-mongo-seeder",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A cypress plugin to populate a mongo db from json files",
   "repository": {
     "type": "git",
@@ -23,7 +23,7 @@
     "prepare": "npm run build",
     "clean": "shx rm -rf build",
     "example": "node examples/test.js",
-    "changelog": "auto-changelog -p"
+    "version": "auto-changelog -p && git add CHANGELOG.md"
   },
   "license": "Unlicense",
   "licenseFilename": "LICENSE",

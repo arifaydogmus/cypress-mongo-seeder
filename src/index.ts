@@ -5,8 +5,8 @@ import { connectToDB, insert } from './dbOps';
 let willDropCollection: boolean;
 
 const seedAFile = async (seedFile: string) => {
-  const collection = await getCollectionName(seedFile);
-  const seedContent = await getFileContent(seedFile);
+  const collection = getCollectionName(seedFile);
+  const seedContent = getFileContent(seedFile);
   if (!collection || !seedContent) {
     console.log('Skipping ', collection || seedFile);
     return;
@@ -24,8 +24,8 @@ export const seedAll = async (
   willDropCollection = dropCollection;
   try {
     const seedsFolder = resolve(dataFolder);
-    const seedFiles = await getJsonFiles(seedsFolder);
-    const db = await connectToDB(mongoUri);
+    const seedFiles = getJsonFiles(seedsFolder);
+    await connectToDB(mongoUri);
     await seedFiles.forEach(seedAFile);
     return true;
   } catch (e) {

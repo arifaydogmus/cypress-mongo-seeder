@@ -1,18 +1,18 @@
 import fs from 'fs';
 import { extname, basename } from 'path';
 
-export const getJsonFiles = async (dir: string) => {
+export const getJsonFiles = (dir: string) => {
   const files = fs.readdirSync(dir);
   return files.map(file => `${dir}/${file}`).filter(isValidFile);
 };
 
-export const getFileContent = async (seedFilePath: string) => {
+export const getFileContent = (seedFilePath: string) => {
   if (!isValidFile(seedFilePath)) {
     return null;
   }
 
-  const imported = await import(seedFilePath);
-  const seedContent = imported.default;
+  const fileContent = fs.readFileSync(seedFilePath);
+  const seedContent = JSON.parse(fileContent.toString());
 
   if (!seedContent || !Array.isArray(seedContent)) {
     return null;
