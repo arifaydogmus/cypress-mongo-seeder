@@ -41,7 +41,8 @@ export const isCollectionExists = async (name: string) => {
 export const insert = async (
   collection: string,
   content: object[],
-  drop: boolean = true
+  drop: boolean = true,
+  bypassValidation: boolean = true
 ) => {
   if (content.length < 1) {
     return false;
@@ -74,7 +75,7 @@ export const insert = async (
     const inserted = await client
       .db()
       .collection(collection)
-      .insertMany(data, { bypassDocumentValidation: true });
+      .insertMany(data, { bypassDocumentValidation: bypassValidation });
 
     return inserted.insertedCount > 0;
   } catch (e) {
