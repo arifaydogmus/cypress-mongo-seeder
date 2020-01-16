@@ -36,6 +36,7 @@ export const json2mongo = (obj: any) => {
         return new mongo.MinKey();
       case '$maxKey':
         return new mongo.MaxKey();
+      case '$numberInt':
       case '$numberLong':
         if (typeof val === 'string') {
           return mongo.Long.fromString(val);
