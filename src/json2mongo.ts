@@ -18,7 +18,7 @@ export const json2mongo = (obj: any) => {
         }
         return new Date(val);
       case '$decimal128':
-        return new mongo.Decimal128(Buffer  .from(val));
+        return new mongo.Decimal128(Buffer.from(val));
       case '$timestamp':
         return new mongo.Timestamp(val.t, val.i);
       case '$regex':
