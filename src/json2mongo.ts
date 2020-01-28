@@ -13,6 +13,9 @@ export const json2mongo = (obj: any) => {
       case '$type':
         return new mongo.Binary(obj.$binary, obj.$type);
       case '$date':
+        if (!val) {
+          return new Date();
+        }
         return new Date(val);
       case '$decimal128':
         return new mongo.Decimal128(Buffer.from(val));
