@@ -26,7 +26,7 @@ export const seedAll = async (
     const seedsFolder = resolve(dataFolder);
     const seedFiles = getJsonFiles(seedsFolder);
     await connectToDB(mongoUri);
-    await Promise.all(seedFiles.map(seedAFile))
+    await Promise.all(seedFiles.map(seedAFile));
     return true;
   } catch (e) {
     console.log(e);
